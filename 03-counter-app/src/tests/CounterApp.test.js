@@ -6,7 +6,9 @@ import { stringify } from 'json5';
 
 describe('tests in CounterApp component', () => {
 
-    let wrapper; // in this moment, its value is undefined, you could initialize it as the content so you don't lose vscode autocomplete even though it's not as clean.
+    let wrapper; // in this moment, its value is undefined so you lose all the autocomplete info, you could initialize it as the content even though it's not as clean.
+
+    // this gets executed before each test and initializes our wrapper variable
 
     beforeEach(() => {
         wrapper = shallow(<CounterApp/>);
@@ -27,7 +29,7 @@ describe('tests in CounterApp component', () => {
         wrapper.find('button').at(0).simulate('click');
         const element = wrapper.find('p').text().trim();
         expect(element).toBe('1');
-    })
+    });
 
     test('should decrement value by 1', () => {
         wrapper.find('button').at(1).simulate('click');
@@ -41,8 +43,6 @@ describe('tests in CounterApp component', () => {
         wrapper.find('button').at(2).simulate('click');
         const element = wrapper.find('p').text().trim();
         expect(element).toBe(stringify(value));
-
-
-    })
+    });
 
 })
