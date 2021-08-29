@@ -10,7 +10,7 @@ describe('Tests in FirstApp component', () => {
 
     // test('Should return greeting message', () => {
     //     const greeting = 'Hi';
-    //     // En la línea inferior estamos aplicando un destructuring para pasarle el método getByText a lo que habíamos llamado wrapper.
+    //     // The previous line is used to apply destructuring so we can pass getByText method to our wrapper variable
     //     // const wrapper = render(<FirstApp greeting={greeting}/>);
 
     //     const { getByText } = render(<FirstApp greeting={ greeting }/>);
